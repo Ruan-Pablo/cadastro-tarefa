@@ -54,19 +54,7 @@ const handleClick = (taskContent) => {
   updateLocalStorage();
 };
 
-const handleDeleteClick = (taskItemContainer, taskContent) => {
-  const tasks = tasksContainer.childNodes;
 
-  for (const task of tasks) {
-    const currentTaskIsBeingClicked = task.firstChild.isSameNode(taskContent);
-
-    if (currentTaskIsBeingClicked) {
-      taskItemContainer.remove();
-    }
-  }
-
-  updateLocalStorage();
-};
 
 const handleInputChange = () => {
   const inputIsValid = validateInput();
